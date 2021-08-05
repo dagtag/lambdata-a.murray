@@ -1,40 +1,42 @@
-""" Import statements """
+### HELPER FUNCTIONS TURNED INTO CLASSES FOR OOP ###
+
 import pandas as pd
 import numpy as np
 
 
-""" class helper """
 class Helper:
+    """ Class Helper with useful modules null_counts and combine """
+
 
     def __init__(self, df1, df2):
-        """ Initializing attributes """
+        """ Initializing dataframe attributes """
         self.df1 = df1
         self.df2 = df2
 
-    def null_count(self, df1, df2):
-        """ function providing sum of nulls in a dataframe """
-        print(df1.isna().sum())
-        print(df2.isna().sum())
+    def null_count(self, df):
+        """ Module returning sum of nulls in a dataframe """
+        return df.isna().sum()
 
     def combine(self, df1, df2):
-        """ function concatinating 2 dataframes """
+        """ Module returning two concatinated dataframes """
         return pd.concat([df1, df2])
 
 
-""" Class module defining patient class and subclasses """
 class Patient:
+    """ Class module defining patient class and subclasses """
+
 
     def __init__(self, age, weight, gender):
-        """ Initializing attributes """
+        """ Initializing patient attributes """
         self.age = age
         self.weight = weight
         self.gender = gender
 
     def sleep(self):
-        """ Prescribe sleep """
-        print("RX Sleep ")
+        """ Prescribes sleep, returns "RX Sleep" """
+        return "RX Sleep"
 
     def set_exercise(self, minutes_of_exercise):
-        """ Sets amount of exercise in minutes """
+        """ Sets amount of exercise in minutes and returns "Minutes of Exercise: x " """
         self.exercise = minutes_of_exercise
-        print(f'Minutes of Exercise: ', self.exercise)
+        return f"Minutes of Exercise: {self.exercise}."

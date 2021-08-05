@@ -1,6 +1,8 @@
+### EXAMPLE OF METHODS (FUNCTIONS) ###
 import sys 
 
 def fib(n):    # write Fibonacci series up to n
+    """ Doc string for fib returning print statement """
     a, b = 0, 1
     while a < n:
         print(a, end=' ')
@@ -8,6 +10,7 @@ def fib(n):    # write Fibonacci series up to n
     print()
 
 def fib2(n):   # return Fibonacci series up to n
+    """ Doc string for fib2 returning result """
     result = []
     a, b = 0, 1
     while a < n:

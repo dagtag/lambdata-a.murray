@@ -1,4 +1,5 @@
-""" IN style_example.py FILE """
+### SAMPLE CODE TO PRACTICE PEP8 STYLE ###
+### IN style_example.py FILE ###
 
 # What would you say if you were working with someone and this is
 # the code they gave you?

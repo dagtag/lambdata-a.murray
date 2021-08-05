@@ -1,6 +1,11 @@
-### CLASS OOP EXAMPLE ###
-""" Class module defining car class and subclasses """
+### Making a basic function to test with pytest ###
+
+def inc(x):
+    """ Increments number by one """
+    return x + 1
+
 class Car:
+    """ Class module defining car class and subclasses """
 
     def __init__(self, make, model, year, color):
         """ Initializing attributes """
@@ -9,6 +14,7 @@ class Car:
         self.year = year
         self.color = color 
         self.mileage = 0
+
 
     def drive(self):
         """ Drives the car """
@@ -22,18 +28,5 @@ class Car:
             print("Can't take away miles")
 
     def fill_gas(self):
+        """ Filling up gas tank """
         print("Filling up on gas.")
-
-
-class ElectricCar(Car):
-
-    def __init__(self, make, model, year, color):
-        super().__init__(make, model, year, color) # super means parent 
-        self.battery = Battery()
-    
-    def fill_gas(self):
-        print("No gas tank.")
-
-class Battery:
-    def __init__(self, battery_size = 100):
-        self.battery_size = battery_size

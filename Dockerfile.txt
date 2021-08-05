@@ -1,0 +1,7 @@
+### DOCKERFILE to take image for Docker (container) ###
+FROM ubuntu 
+
+RUN apt-get update && \
+  apt-get upgrade -y && \
+  apt-get install python3-pip curl pandas numpy scikit-learn -y && \
+  pip3 install pipenv
